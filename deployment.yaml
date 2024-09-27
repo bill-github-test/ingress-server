@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-api-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask-api-server
+  template:
+    metadata:
+      labels:
+        app: flask-api-server
+    spec:
+      containers:
+      - name: flask-api-server-container
+        image: BillTestContainerRegistry.azurecr.io/flask-api-server:latest
+        ports:
+        - containerPort: 8000
+
