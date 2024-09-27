@@ -10,6 +10,8 @@ variables:
   aksClusterName: BillTestCluster
   # Docker Image Name
   dockerImageName: vmss-server-aks
+  # Service Connection
+  serviceConnection: BillTestServiceConnection-BillFlaskApiServer
 
 stages:
 - stage: Build
@@ -20,7 +22,7 @@ stages:
     steps:
     - task: AzureCLI@2
       inputs:
-        azureSubscription: BillTestServiceConnection-BillTestVmssServerAks
+        azureSubscription: $(serviceConnection)
         scriptType: 'bash'
         scriptLocation: 'inlineScript'
         inlineScript: |
@@ -37,7 +39,7 @@ stages:
     steps:
     - task: AzureCLI@2
       inputs:
-        azureSubscription: BillTestServiceConnection-BillTestVmssServerAks
+        azureSubscription: $(serviceConnection)
         scriptType: 'bash'
         scriptLocation: 'inlineScript'
         inlineScript: |
