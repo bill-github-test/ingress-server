@@ -15,6 +15,7 @@ spec:
       containers:
       - name: flask-api-server-container
         image: BillTestContainerRegistry.azurecr.io/flask-api-server:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 8000
 

@@ -9,7 +9,7 @@ variables:
   # AKS Cluster Name
   aksClusterName: BillTestCluster
   # Docker Image Name
-  dockerImageName: vmss-server-aks
+  dockerImageName: flask-api-server
   # Service Connection
   serviceConnection: BillTestServiceConnection-BillFlaskApiServer
 
