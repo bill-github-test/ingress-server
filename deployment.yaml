@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: flask-api-server
+  namespace: bill-test
 spec:
   replicas: 1
   selector:
