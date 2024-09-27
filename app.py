@@ -10,7 +10,7 @@ books = [
 
 @app.route('/', methods=['GET'])
 def default():
-    return 'Flask API server works!'
+    return 'Congrats! Flask API server works!'
 
 @app.route('/books', methods=['GET'])
 def get_books():
