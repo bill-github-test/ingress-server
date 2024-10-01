@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: flask-api-server-service
+  name: ingress-server-service
   namespace: bill-test
 spec:
   selector:
-    app: flask-api-server
+    app: ingress-server
   ports:
     - protocol: TCP
       port: 80
       targetPort: 8000
-  type: LoadBalancer
+  type: ClusterIP
