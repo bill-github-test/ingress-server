@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flask-api-server
+  name: ingress-server
   namespace: bill-test
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: flask-api-server
+      app: imgress-server
   template:
     metadata:
       labels:
-        app: flask-api-server
+        app: imgress-server
     spec:
       containers:
       - name: flask-api-server-container
