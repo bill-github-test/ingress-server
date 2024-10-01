@@ -9,9 +9,9 @@ variables:
   # AKS Cluster Name
   aksClusterName: BillTestCluster
   # Docker Image Name
-  dockerImageName: flask-api-server
+  dockerImageName: ingress-server
   # Service Connection
-  serviceConnection: BillTestServiceConnection-BillFlaskApiServer
+  serviceConnection: BillTestServiceConnection-BillIngressServer
   # Namespace
   namespace: bill-test
 
@@ -49,5 +49,5 @@ stages:
           kubectl apply -f namespace.yaml
           kubectl apply -f deployment.yaml -n $(namespace)
           kubectl apply -f service.yaml -n $(namespace)
-          kubectl rollout restart deployment/flask-api-server -n $(namespace)
+          kubectl rollout restart deployment/ingress-server -n $(namespace)
       displayName: 'Deploy to AKS'

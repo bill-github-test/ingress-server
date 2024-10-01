@@ -14,7 +14,7 @@ spec:
         app: imgress-server
     spec:
       containers:
-      - name: flask-api-server-container
+      - name: ingress-server-container
         image: BillTestContainerRegistry.azurecr.io/ingress-server:latest
         imagePullPolicy: Always
         ports:
