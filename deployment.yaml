@@ -7,11 +7,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: imgress-server
+      app: ingress-server
   template:
     metadata:
       labels:
-        app: imgress-server
+        app: ingress-server
     spec:
       containers:
       - name: ingress-server-container
